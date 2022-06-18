@@ -6,10 +6,10 @@ import za.ac.cput.util.StringHelper;
 
 /*CityFactory.java
 @Author Nolubabalo Ndongeni 219319464
-Date: 13 June 2022
+Date: 10 June 2022
 */
 public class CityFactory {
-    public static City createCity(String id, String name, Country country){
+    public static City buildCity(String id, String name, Country country){
         StringHelper.checkStringParam("id", id);
         StringHelper.checkStringParam("name", name);
 

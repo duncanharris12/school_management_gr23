@@ -8,18 +8,25 @@ import java.util.Set;
 
 /*City.java
 @Author Nolubabalo Ndongeni 219319464
-Date: 13 June 2022
+Date: 10 June 2022
 */
 @Entity
 public class City implements Serializable {
+
     @Id
     private String id;
     private String name;
 
     //@OneToMany(targetEntity = Country.class, mappedBy ="id",
-                    //fetch = FetchType.LAZY,cascade = CascadeType.ALL);
+                   // fetch = FetchType.LAZY,cascade = CascadeType.ALL);
 
-    private Set<Country> country;
+    @ManyToOne
+    @JoinColumn(name = "country_id")
+    private Country country;
+
+    public void setCountry(Country country) {
+        this.country = country;
+    }
 
 
     protected City(){}
@@ -28,7 +35,7 @@ public class City implements Serializable {
     {
         this.id =builder.id;
         this.name = builder.name;
-        this.country = Collections.singleton(builder.country);
+        this.country = builder.country;
     }
 
     public String getId() {
@@ -39,7 +46,7 @@ public class City implements Serializable {
         return name;
     }
 
-    public Set<Country> getCountry(){
+    public Country getCountry(){
         return country;
     }
 
