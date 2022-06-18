@@ -1,12 +1,23 @@
 package za.ac.cput.factory.users;
-
+/*
+    Name: Duncan Benjamin Harris
+    Student Number: 220110530
+    Group Number: 23
+    Test
+ */
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import za.ac.cput.domain.details.Address;
+import za.ac.cput.domain.details.City;
+import za.ac.cput.domain.details.Country;
 import za.ac.cput.domain.users.StudentAddress;
+import za.ac.cput.factory.details.AddressFactory;
+import za.ac.cput.factory.details.CityFactory;
+import za.ac.cput.factory.details.CountryFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class studentAddressFactoryTest
+class StudentAddressFactoryTest
 {
     private Country country;
     private City city;
@@ -16,11 +27,11 @@ class studentAddressFactoryTest
     void setUp()
     {
 
-        this.country = CountryFactory.build("1", "SA");
+        this.country = CountryFactory.createCountry("1", "SA");
         assertNotNull(country);
-        this.city = CityFactory.build("12", "Cpt", country);
+        this.city = CityFactory.createCity("12", "Cpt", country);
         assertNotNull(city);
-        this.address = AddressFactory.createAddress("1",
+        this.address = AddressFactory.build("1",
                 "cName"
                 ,"27"
                 ,"flak"
