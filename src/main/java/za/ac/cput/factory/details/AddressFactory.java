@@ -3,22 +3,21 @@
 //This is AddressFactory.java
 
 package za.ac.cput.factory.details;
-import za.ac.cput.domain.details.City;
-import za.ac.cput.domain.details.Address;
-import za.ac.cput.util.StringHelper;
-
 /**
  * @author Chuma Nxazonke
  * Date: 10 June 2022
  * Student number: 219181187
  */
+import za.ac.cput.util.StringHelper;
+import za.ac.cput.domain.details.Address;
+
 public class AddressFactory {
 
-    public static Address createAddress (String unitNumber,String complexName,String streetNumber, String streetName, int postalCode, City city) {
+    public static Address build(String unitNumber, String complexName, String streetNumber,String streetName, int postalCode , City city ){
 
         StringHelper.checkStringParam("streetNumber",streetNumber);
-
         StringHelper.checkStringParam("streetName",streetName);
+
 
         if(StringHelper.isEmptyOrNull(complexName))
             throw new IllegalArgumentException("Complex name is required");
@@ -26,7 +25,7 @@ public class AddressFactory {
         if (StringHelper.isEmptyOrNull(unitNumber))
             throw new IllegalArgumentException("Unit number is required");
 
-        if (postalCode<999 || postalCode> 9999){
+        if (postalCode<999 || postalCode> 9999) {
             throw new IllegalArgumentException("Postal code needs to be 4 digits");
         }
 
@@ -35,10 +34,10 @@ public class AddressFactory {
                 .StreetNumber(streetNumber)
                 .StreetName(streetName)
                 .PostalCode(postalCode)
-                .City(city)
                 .build();
 
         return address;
 
     }
+
 }

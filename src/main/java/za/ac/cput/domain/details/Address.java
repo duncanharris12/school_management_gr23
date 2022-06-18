@@ -1,9 +1,11 @@
+
+
 //This is a worker class for Address entity
 //In this class I will create all the attributes for this entity.
 //In this class I will be creating getters and setters for this entity
 //This is a Address.java
-
 package za.ac.cput.domain.details;
+
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -27,7 +29,7 @@ public class Address {
     private int postalCode;
 
     //@Embedded
-    @ManyToOne(targetEntity = City.class,cascade = CascadeType.ALL)
+    @ManyToOne(targetEntity = City.class,cascade = CascadeType.ALL) //one city can have many addresses, many refers to the class its currently on, one refers to the class thats being joined
     private City city;
 
     protected Address() {
@@ -69,6 +71,16 @@ public class Address {
 
 
     @Override
+    public String toString() {
+        return "Address{" +
+                "unitNumber='" + unitNumber + '\'' +
+                ", complexName='" + complexName + '\'' +
+                ", streetNumber='" + streetNumber + '\'' +
+                ", postalCode=" + postalCode +
+                '}';
+    }
+
+    @Override
     public boolean equals (Object o){
 
         if (this == o) return true;
@@ -81,19 +93,6 @@ public class Address {
     public int hashCode() {
         return Objects.hash(unitNumber);
     }
-
-
-    @Override
-    public String toString() {
-        return "Address{" +
-                "unitNumber='" + unitNumber + '\'' +
-                ", complexName='" + complexName + '\'' +
-                ", streetNumber='" + streetNumber + '\'' +
-                ", postalCode=" + postalCode +
-                '}';
-    }
-
-
 
     public static class Builder {
         private String unitNumber;
@@ -128,18 +127,18 @@ public class Address {
             return this;
         }
 
-        public Builder City(City city){
+        public Builder City(City city) {
             this.city = city;
             return this;
         }
 
-        public Builder copy(Address address){
+        public Builder copy(Address address) {
             this.unitNumber = address.unitNumber;
             this.complexName = address.complexName;
             this.streetNumber = address.streetNumber;
             this.streetName = address.streetName;
             this.postalCode = address.postalCode;
-            this.city= address.city;
+            this.city = address.city;
             return this;
         }
 
@@ -148,7 +147,7 @@ public class Address {
         }
 
         @Override
-        public boolean equals (Object o){
+        public boolean equals(Object o) {
 
             if (this == o) return true;
             if (o == null || getClass() == o.getClass()) return false;
@@ -161,8 +160,6 @@ public class Address {
             return Objects.hash(unitNumber);
         }
 
-
     }
-
 
 }
