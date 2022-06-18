@@ -9,9 +9,6 @@ package za.ac.cput.domain.details;
 import javax.persistence.*;
 import java.util.Objects;
 
-import lombok.Getter;
-import lombok.Setter;
-import za.ac.cput.domain.details.City;
 /**
  * @uthor Chuma Nxazonke
  * Student number: 219181187
@@ -20,19 +17,20 @@ import za.ac.cput.domain.details.City;
 
 @Embeddable
 public class Address {
-
+//
     private String unitNumber;
     private String complexName;
     private String streetNumber;
     private String streetName;
     private int postalCode;
 
-    //@Embedded
-    @ManyToOne(targetEntity = City.class,cascade = CascadeType.ALL) //one city can have many addresses, many refers to the class its currently on, one refers to the class thats being joined
+
+    @ManyToOne(targetEntity = City.class,cascade = CascadeType.ALL)
     private City city;
 
     protected Address() {
     }
+
 
     public Address(Builder builder) {
         this.unitNumber = builder.unitNumber;
@@ -79,19 +77,6 @@ public class Address {
                 '}';
     }
 
-    @Override
-    public boolean equals (Object o){
-
-        if (this == o) return true;
-        if (o == null || getClass() == o.getClass()) return false;
-        Address address = (Address) o;
-        return unitNumber.equals(address.unitNumber);
-
-    }
-
-    public int hashCode() {
-        return Objects.hash(unitNumber);
-    }
 
     public static class Builder {
         private String unitNumber;
@@ -143,20 +128,6 @@ public class Address {
 
         public Address build() {
             return new Address(this);
-        }
-
-        @Override
-        public boolean equals(Object o) {
-
-            if (this == o) return true;
-            if (o == null || getClass() == o.getClass()) return false;
-            Address address = (Address) o;
-            return unitNumber.equals(address.unitNumber);
-
-        }
-
-        public int hashCode() {
-            return Objects.hash(unitNumber);
         }
 
     }
