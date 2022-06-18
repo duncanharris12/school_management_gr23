@@ -31,7 +31,7 @@ class StudentAddressFactoryTest
         assertNotNull(country);
         this.city = CityFactory.buildCity("12", "Cpt", country);
         assertNotNull(city);
-        this.address = AddressFactory.build("1",
+        this.address = AddressFactory.createAddressFactory("1",
                 "cName"
                 ,"27"
                 ,"flak"
