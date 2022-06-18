@@ -8,9 +8,10 @@ import za.ac.cput.util.StringHelper;
 
 public class EmployeeAddressFactory {
     public static EmployeeAddress build(String staffId, Address address) {
-        StringHelper.setEmptyIfNull(staffId);
+        StringHelper.checkStringParam("staff ID", staffId);
         return new EmployeeAddress.Builder()
                 .setStaffId(staffId)
+                .setAddress(address)
                 .build();
     }
 }

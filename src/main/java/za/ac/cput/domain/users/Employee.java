@@ -1,7 +1,8 @@
+/*  Davin Carstens 220021333
+ */
 package za.ac.cput.domain.users;
 
 import za.ac.cput.domain.details.Name;
-
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -59,7 +60,6 @@ public class Employee {
                 '}';
     }
 
-
     public static class Builder{
         private String staffId;
         private String email;
@@ -79,7 +79,6 @@ public class Employee {
             this.name = name;
             return this;
         }
-
         public Builder copy(Employee employee){
             this.staffId = employee.staffId;
             this.email = employee.email;
@@ -90,7 +89,6 @@ public class Employee {
         public Employee build(){
             return new Employee(this);
         }
-
     }
 
 }

@@ -2,24 +2,16 @@
  */
 package za.ac.cput.domain.users;
 
-
-
 import za.ac.cput.domain.details.Address;
-
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
+import javax.persistence.*;
 import java.util.Objects;
 @Entity
 public class EmployeeAddress
 {
     @Id
     private String staffId;
-    @JoinColumn(insertable = false,updatable = false)
     @Embedded
     private Address address;
-
     protected EmployeeAddress(){
 
     }
