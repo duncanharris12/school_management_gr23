@@ -19,21 +19,22 @@ public class StudentAddressServiceImpl implements StudentAddressIService
 
     @Override
     public StudentAddress save(StudentAddress studentAddress) {
-        return null;
+        return this.repository.save(studentAddress);
     }
 
     @Override
-    public StudentAddress read(String s) {
-        return null;
+    public StudentAddress read(String studentId) {
+        return this.repository.getById(studentId);
     }
 
     @Override
-    public void delete(String s) {
-
+    public void delete(String studentId)
+    {
+        this.repository.deleteById(studentId);
     }
 
     @Override
     public List<StudentAddress> findAll() {
-        return null;
+        return this.repository.findAll();
     }
 }

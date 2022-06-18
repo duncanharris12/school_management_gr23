@@ -21,21 +21,22 @@ public class StudentServiceImpl implements StudentIService
 
     @Override
     public Student save(Student student) {
-        return null;
+        return this.repository.save(student);
     }
 
     @Override
-    public Student read(String s) {
-        return null;
+    public Student read(String studentId) {
+        return this.repository.getById(studentId);
     }
 
     @Override
-    public void delete(String s) {
-
+    public void delete(String studentId)
+    {
+        this.repository.deleteById(studentId);
     }
 
     @Override
     public List<Student> findAll() {
-        return null;
+        return this.repository.findAll();
     }
 }
