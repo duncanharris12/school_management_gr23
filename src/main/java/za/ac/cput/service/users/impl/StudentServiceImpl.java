@@ -20,17 +20,12 @@ public class StudentServiceImpl implements StudentIService
     }
 
     @Override
-    public Student create(Student student) {
+    public Student save(Student student) {
         return null;
     }
 
     @Override
     public Student read(String s) {
-        return null;
-    }
-
-    @Override
-    public Student update(Student student) {
         return null;
     }
 

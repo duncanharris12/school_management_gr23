@@ -18,17 +18,12 @@ public class StudentAddressServiceImpl implements StudentAddressIService
     }
 
     @Override
-    public StudentAddress create(StudentAddress studentAddress) {
+    public StudentAddress save(StudentAddress studentAddress) {
         return null;
     }
 
     @Override
     public StudentAddress read(String s) {
-        return null;
-    }
-
-    @Override
-    public StudentAddress update(StudentAddress studentAddress) {
         return null;
     }
 
