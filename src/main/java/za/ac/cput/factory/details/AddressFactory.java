@@ -5,15 +5,16 @@
 package za.ac.cput.factory.details;
 /**
  * @author Chuma Nxazonke
- * Date: 10 June 2022
+ * Date: 11 June 2022
  * Student number: 219181187
  */
 import za.ac.cput.util.StringHelper;
 import za.ac.cput.domain.details.Address;
+import za.ac.cput.domain.details.City;
 
 public class AddressFactory {
 
-    public static Address build(String unitNumber, String complexName, String streetNumber,String streetName, int postalCode , City city ){
+    public static Address createAddressFactory(String unitNumber, String complexName, String streetNumber,String streetName, int postalCode , City city ){
 
         StringHelper.checkStringParam("streetNumber",streetNumber);
         StringHelper.checkStringParam("streetName",streetName);
@@ -25,8 +26,10 @@ public class AddressFactory {
         if (StringHelper.isEmptyOrNull(unitNumber))
             throw new IllegalArgumentException("Unit number is required");
 
+
+
         if (postalCode<999 || postalCode> 9999) {
-            throw new IllegalArgumentException("Postal code needs to be 4 digits");
+            throw new IllegalArgumentException("Postal code has to be 4 digits");
         }
 
         Address address = new Address.Builder().UnitNumber(unitNumber)
@@ -34,6 +37,7 @@ public class AddressFactory {
                 .StreetNumber(streetNumber)
                 .StreetName(streetName)
                 .PostalCode(postalCode)
+                .City(city)
                 .build();
 
         return address;
