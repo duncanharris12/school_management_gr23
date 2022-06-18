@@ -1,12 +1,17 @@
 package za.ac.cput.domain.details;
 
+/**
+ * Name: Onele Tomson
+ * Student number: 219483280
+ *Country
+ */
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 @Entity
 public class Country implements Serializable {
-
     @Id
     private String id;
     @NotNull
@@ -14,13 +19,13 @@ public class Country implements Serializable {
 
     protected Country() {
     }
-
     private Country(Builder b){
         this.id = b.id;
         this.name = b.name;
     }
 
     public String getId() {
+
         return id;
     }
 
@@ -29,8 +34,8 @@ public class Country implements Serializable {
     }
 
 
-
     public String getName() {
+
         return name;
     }
 
@@ -46,10 +51,8 @@ public class Country implements Serializable {
                 '}';
     }
 
-
     public static class Builder{
-        private String id;
-        private String name;
+        private String id, name;
 
         public Builder id(String id){
             this.id = id;
@@ -70,8 +73,6 @@ public class Country implements Serializable {
         public Country build(){
             return new Country(this);
         }
-
-
 
     }
 }
