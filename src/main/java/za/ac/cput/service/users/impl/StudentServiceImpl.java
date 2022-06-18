@@ -1,5 +1,10 @@
 package za.ac.cput.service.users.impl;
-
+/*
+    Name: Duncan Benjamin Harris
+    Student Number: 220110530
+    Group Number: 23
+    Student Service Implementation
+ */
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.cput.domain.users.Student;
@@ -11,7 +16,7 @@ import java.util.List;
 @Service
 public class StudentServiceImpl implements StudentIService
 {
-    private StudentRepository repository;
+    private final StudentRepository repository;
 
     @Autowired
     public StudentServiceImpl(StudentRepository studentRepository)
