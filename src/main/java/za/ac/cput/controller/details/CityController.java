@@ -17,7 +17,7 @@ import java.util.Optional;
 Date: 14 June 2022
 */
 @RestController
-@RequestMapping ("/school-management-gr23/cities")
+@RequestMapping ("/school_management/city")
 public class CityController {
     private final ICityService ICityService;
 

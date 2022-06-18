@@ -1,5 +1,6 @@
 package za.ac.cput.controller.details;
 
+import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
@@ -35,7 +36,7 @@ class CityControllerTest {
     @BeforeEach
     void setUp(){
         this.city = CityFactory.buildCity("city003","Gauteng", CountryFactory.builder("country003","South Africa"));
-        this.BASE_URL = "http://localhost:"+this.port+"/school_management/cities/";
+        this.BASE_URL = "http://localhost:"+this.port+"/school_management/city/";
         save();
     }
 
