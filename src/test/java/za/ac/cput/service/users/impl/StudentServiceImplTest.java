@@ -1,4 +1,10 @@
 package za.ac.cput.service.users.impl;
+/*
+    Name: Duncan Benjamin Harris
+    Student Number: 220110530
+    Group Number: 23
+    Test
+ */
 
 import org.junit.jupiter.api.*;
 import za.ac.cput.domain.details.Name;
@@ -24,7 +30,7 @@ class StudentServiceImplTest {
     @BeforeEach
     void setUp()
     {
-        service = new StudentServiceImpl(repository);
+        this.service = new StudentServiceImpl(repository);
         this.name = NameFactory.buildName("Duncan"
                 ,"Benjamin"
                 ,"Harris");
