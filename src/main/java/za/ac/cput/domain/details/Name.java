@@ -1,3 +1,9 @@
+/*
+ * Name       : Chante Lee Davids
+ * Student num: 220246688
+ * Description: The name entity is implemented using the builder pattern
+ * */
+
 package za.ac.cput.domain.details;
 
 import javax.persistence.Embeddable;
@@ -14,7 +20,7 @@ public class Name {
     protected Name() {
     }
 
-    private Name (Builder builder){
+    private Name(Builder builder){
         this.firstName= builder.firstName;
         this.middleName = builder.middleName;
         this.lastName=builder.lastName;
@@ -59,17 +65,17 @@ public class Name {
     public static class Builder{
         private String firstName, middleName, lastName;
 
-        public Builder FirstName(String firstName) {
+        public Builder setFirstName(String firstName) {
             this.firstName = firstName;
             return this;
         }
 
-        public Builder MiddleName(String middleName) {
+        public Builder setMiddleName(String middleName) {
             this.middleName = middleName;
             return this;
         }
 
-        public Builder LastName(String lastName) {
+        public Builder setLastName(String lastName) {
             this.lastName = lastName;
             return this;
         }

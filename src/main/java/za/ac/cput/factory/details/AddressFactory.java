@@ -8,6 +8,7 @@ package za.ac.cput.factory.details;
  * Date: 10 June 2022
  * Student number: 219181187
  */
+import za.ac.cput.domain.details.City;
 import za.ac.cput.util.StringHelper;
 import za.ac.cput.domain.details.Address;
 
@@ -34,6 +35,7 @@ public class AddressFactory {
                 .StreetNumber(streetNumber)
                 .StreetName(streetName)
                 .PostalCode(postalCode)
+                .City(city)
                 .build();
 
         return address;
