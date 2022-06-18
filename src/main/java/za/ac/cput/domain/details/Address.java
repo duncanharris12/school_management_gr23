@@ -1,5 +1,4 @@
 
-
 //This is a worker class for Address entity
 //In this class I will create all the attributes for this entity.
 //In this class I will be creating getters and setters for this entity
@@ -161,5 +160,4 @@ public class Address {
         }
 
     }
-
 }
