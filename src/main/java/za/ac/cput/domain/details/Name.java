@@ -59,17 +59,17 @@ public class Name {
     public static class Builder{
         private String firstName, middleName, lastName;
 
-        public Builder FirstName(String firstName) {
+        public Builder firstName(String firstName) {
             this.firstName = firstName;
             return this;
         }
 
-        public Builder MiddleName(String middleName) {
+        public Builder middleName(String middleName) {
             this.middleName = middleName;
             return this;
         }
 
-        public Builder LastName(String lastName) {
+        public Builder lastName(String lastName) {
             this.lastName = lastName;
             return this;
         }
