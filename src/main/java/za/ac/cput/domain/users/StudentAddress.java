@@ -6,6 +6,8 @@ package za.ac.cput.domain.users;
     Student Address Entity
  */
 
+import za.ac.cput.domain.details.Address;
+
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;

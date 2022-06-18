@@ -6,6 +6,7 @@ package za.ac.cput.factory.users;
     Student Address Factory
  */
 
+import za.ac.cput.domain.details.Address;
 import za.ac.cput.domain.users.StudentAddress;
 import za.ac.cput.util.StringHelper;
 
