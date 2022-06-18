@@ -45,10 +45,9 @@ class CityServiceTest {
     @Test
     @Order(2)
     void read() {
-        Optional<City> read = this.service.read(this.city.getId());
-        System.out.println(read);
-        assertTrue(read.isPresent());
-        assertEquals(this.city,read.get());
+        City city1= this.service.read(this.city.getId());
+        System.out.println(city);
+        assertEquals(this.city,city.getId());
 
     }
 
