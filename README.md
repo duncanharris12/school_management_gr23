@@ -3,6 +3,7 @@ ADP_Assignment_Repository_Redone
 
 
 Question 10
+_____________________________________________________________________________________________________________________________________________
 Because of the way the UML is built up, some entities must be completed before moving on to the next.
 Some students may experience difficulties as a result of having to wait for someone else to finish their entity before they can begin working. 
 This goes for the testing as well. Due to the fact that different entities may be built before moving to the next and error within a previous entity
