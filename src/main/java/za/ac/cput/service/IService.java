@@ -1,4 +1,4 @@
-package za.ac.cput.service.users;
+package za.ac.cput.service;
 
 public interface IService<T, ID> {
 
