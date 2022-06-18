@@ -65,17 +65,17 @@ public class Name {
     public static class Builder{
         private String firstName, middleName, lastName;
 
-        public Builder firstName(String firstName) {
+        public Builder setFirstName(String firstName) {
             this.firstName = firstName;
             return this;
         }
 
-        public Builder middleName(String middleName) {
+        public Builder setMiddleName(String middleName) {
             this.middleName = middleName;
             return this;
         }
 
-        public Builder lastName(String lastName) {
+        public Builder setLastName(String lastName) {
             this.lastName = lastName;
             return this;
         }

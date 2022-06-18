@@ -22,9 +22,9 @@ public class NameFactory {
         middleName = StringHelper.setEmptyIfNull(middleName);
 
         return new Name.Builder()
-                .firstName(firstName)
-                .middleName(middleName)
-                .lastName(lastName)
+                .setFirstName(firstName)
+                .setMiddleName(middleName)
+                .setLastName(lastName)
                 .build();
     }
 }
