@@ -1,3 +1,9 @@
+/*
+ * Name       : Chante Lee Davids
+ * Student num: 220246688
+ * Description: Name domain
+ * */
+
 package za.ac.cput.domain.details;
 
 import javax.persistence.Embeddable;
