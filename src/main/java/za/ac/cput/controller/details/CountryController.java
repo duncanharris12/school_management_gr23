@@ -19,7 +19,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("school_management_gr23/country/")
+@RequestMapping("/school_management_gr23/country/")
 @Log4j2
 
 public class CountryController {

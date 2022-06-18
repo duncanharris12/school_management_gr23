@@ -6,8 +6,6 @@
 
 package za.ac.cput.service.details.interfaces;
 
-import za.ac.cput.domain.details.Name;
-
-public interface INameService extends IService<Name, String>{
+public interface INameService {
 
 }

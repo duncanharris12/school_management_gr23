@@ -1,9 +1,6 @@
 package za.ac.cput.domain.details;
 
-<<<<<<< HEAD
-public class City {
-}
-=======
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collections;
@@ -107,9 +104,4 @@ public class City implements Serializable {
 
     }
 
-    }
-
-
-
-
->>>>>>> origin/master
+}
