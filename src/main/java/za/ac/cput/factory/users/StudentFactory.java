@@ -10,7 +10,12 @@ import za.ac.cput.domain.details.Name;
 import za.ac.cput.domain.users.Student;
 import za.ac.cput.util.EmailAddressValidator;
 import za.ac.cput.util.StringHelper;
-
+/*
+    Name: Duncan Benjamin Harris
+    Student Number: 220110530
+    Group Number: 23
+    Student Factory
+ */
 public class StudentFactory
 {
     public static Student build(String studentId, String email, Name name)
